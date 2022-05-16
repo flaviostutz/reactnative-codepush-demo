@@ -28,4 +28,6 @@ const App = () => {
   );
 };
 
-export default codePush(App);
+let codePushOptions = { installMode: codePush.InstallMode.IMMEDIATE };
+
+export default codePush(codePushOptions)(App);
