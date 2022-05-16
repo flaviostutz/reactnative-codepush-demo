@@ -1,4 +1,15 @@
+import React from 'react';
+import {StatusBar, SafeAreaView, ScrollView, View, Text,StyleSheet} from 'react-native';
 import codePush from 'react-native-code-push';
+
+const styles = StyleSheet.create({
+  scrollView: {
+    width: '100%',
+  },
+  body: {
+    width: '100%',
+  },
+});
 
 const App = () => {
   return (
