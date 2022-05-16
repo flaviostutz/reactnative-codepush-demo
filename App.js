@@ -20,7 +20,7 @@ const App = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <Text>Test</Text>
+            <Text>Test v2</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
