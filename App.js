@@ -28,6 +28,7 @@ const App = () => {
   );
 };
 
-let codePushOptions = { installMode: codePush.InstallMode.IMMEDIATE };
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
+// let codePushOptions = { installMode: codePush.InstallMode.IMMEDIATE };
 
 export default codePush(codePushOptions)(App);
