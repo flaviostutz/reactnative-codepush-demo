@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
   body: {
     width: '100%',
   },
+  titleText: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: 'black'
+  }
 });
 
 const App = () => {
@@ -20,7 +25,7 @@ const App = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <Text>Test v5</Text>
+            <Text style={styles.titleText}>Test v26</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -28,7 +33,13 @@ const App = () => {
   );
 };
 
-let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
+let codePushOptions = { 
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+  rollbackRetryOptions: {
+    delayInHours: 0,
+    maxRetryAttempts: 10
+  }
+};
 // let codePushOptions = { installMode: codePush.InstallMode.IMMEDIATE };
 
 export default codePush(codePushOptions)(App);
